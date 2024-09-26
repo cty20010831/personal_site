@@ -12,9 +12,9 @@ const SideBar = () => (
         <img src={`${PUBLIC_URL}/images/me.jpg`} alt="" />
       </Link>
       <header>
-        <h2>Michael D&apos;Angelo</h2>
+        <h2>Sam Cong</h2>
         <p>
-          <a href="mailto:michael@mldangelo.com">michael@mldangelo.com</a>
+          <a href="congtianyue233@gmail.com">congtianyue233@gmail.com</a>
         </p>
       </header>
     </section>
@@ -22,19 +22,18 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi, I&apos;m Michael. I am a{' '}
-        <a href="https://icme.stanford.edu/">Stanford ICME</a> graduate, YC
-        alumnus, and the co-founder and CTO of{' '}
-        <a href="https://promptfoo.dev">Promptfoo</a>. Previously, I
-        was VP of Engineering at <a href="https://usesmileid.com">SmileID</a>,
-        co-founder and CTO of <a href="https://arthena.com">Arthena</a>, and
-        co-founded <a href="https://matroid.com">Matroid</a>.
+        Hi there, this&apos;s Sam speaking! I am currently a second-year master in {' '}
+        computational social science (MACSS) student at the {' '}
+        <a href="https://www.uchicago.edu/"> University of Chicago </a>. {' '}
+        I have a broad interest in cognitive modeling to better understand {' '}
+        human cognitive processes across the specturm of mental health, {' '}
+        including individuals with and without mental disorder. {' '}
       </p>
       <ul className="actions">
         <li>
           {!window.location.pathname.includes('/resume') ? (
             <Link to="/resume" className="button">
-              Learn More
+              Check out My Resume
             </Link>
           ) : (
             <Link to="/about" className="button">
@@ -48,7 +47,7 @@ const SideBar = () => (
     <section id="footer">
       <ContactIcons />
       <p className="copyright">
-        &copy; Michael D&apos;Angelo <Link to="/">mldangelo.com</Link>.
+        &copy; Sam Cong <Link to="/">congtianyue233@gmail.com</Link>.
       </p>
     </section>
   </section>
