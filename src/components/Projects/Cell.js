@@ -17,7 +17,8 @@ const Cell = ({ data }) => (
         <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} />
       </a>
       <div className="description">
-        <p>{data.desc}</p>
+        <p style={{ color: 'blue', fontWeight: 'bold' }}>{data.desc}</p>
+        {/* <p>{data.desc}</p> */}
       </div>
     </article>
   </div>
