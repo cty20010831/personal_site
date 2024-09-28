@@ -49,3 +49,15 @@ I am a second-year UChicago MACSS student interested in <b style="color:#FF6347;
 - 🩷 Keigo Higashino
 
 ## Photo Collection
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="images/photography/img1.JPG" alt="Photo 1" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img2.JPG" alt="Photo 2" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img3.JPG" alt="Photo 3" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img4.JPG" alt="Photo 4" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img5.JPG" alt="Photo 5" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img6.JPG" alt="Photo 6" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img7.JPG" alt="Photo 7" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img8.JPG" alt="Photo 8" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+  <img src="images/photography/img9.JPG" alt="Photo 9" style="width: calc(33.33% - 10px); height: 300px; object-fit: cover;">
+</div>
+
