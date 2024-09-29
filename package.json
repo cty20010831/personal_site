@@ -5,7 +5,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/cty20010831/cty20010831.github.io.git"
+    "url": "https://github.com/cty20010831/cty20010831.github.io"
   },
   "engines": {
     "node": ">=16.x"
