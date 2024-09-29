@@ -26,7 +26,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: https://cty20010831.github.io  # Manually set the environment URL to my GitHub Pages URL
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-20.04
     timeout-minutes: 10
     steps:
