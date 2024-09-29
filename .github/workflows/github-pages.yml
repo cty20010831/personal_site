@@ -75,7 +75,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-      
-      # NEW STEP: Output the URL after deployment
-      - name: Show Deployment URL
-        run: echo "The site has been deployed to: ${{ steps.deployment.outputs.page_url }}"
