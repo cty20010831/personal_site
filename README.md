@@ -1,6 +1,6 @@
 # Personal Website
 
-Welcome to my [personal website](https://mldangelo.com)! This is an [MIT licensed](https://github.com/mldangelo/personal-site/blob/main/LICENSE) React-based Jamstack application. It offers a simple interface, easy modifications, static export capabilities, and free automatic deployments via [GitHub Pages](https://pages.github.com/).
+Welcome to my [personal website](https://cty20010831.github.io/personal_site/)! This is an [MIT licensed](https://github.com/mldangelo/personal-site/blob/main/LICENSE) React-based Jamstack application. It offers a simple interface, easy modifications, static export capabilities, and free automatic deployments via [GitHub Pages](https://pages.github.com/).
 
 ## 🚀 Features
 
@@ -32,7 +32,6 @@ Ensure you have [node](https://nodejs.org/) >= v16. Optionally, use [nvm](https:
 2. (Optional) Ensure you're on Node v16 or higher:
 
    ```bash
-   
    # Install nvm (make sure to fetch the latest version)
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
@@ -56,27 +55,23 @@ Ensure you have [node](https://nodejs.org/) >= v16. Optionally, use [nvm](https:
 By default, the application should be available at [http://localhost:3000/](http://localhost:3000/).
 
 ## 🚢 Deploying
+Here, I added lines under `package.json` to directly deploy using gh-pages without needing to using github workfow (`.github/workflows/github-pages/yml` deleted). 
 
-### Deploying to GitHub Pages
+![alt](docs/images/package_script_sec.png)
 
-1. Update the environment variables and Git remote URL in [`.github/workflows/github-pages.yml`](.github/workflows/github-pages.yml).
-2. Adjust the `homepage` value in `package.json` based on your hosting preferences.
-3. Planning on using a custom domain? Update `public/CNAME`. Otherwise, remove it.
+![alt](docs/images/package_devDependecies_sec.png)
 
-After making a commit to `main`, simply push your changes, and the deployment will be handled automatically.
+![alt](docs/images/package_reactSnap.png)
 
-### Static Export
 
-For a static export without deploying to GitHub Pages:
+Now, to update changes and deploy it to my personal website, simply run:
+```bash
+npm run build
 
-- Remove or disable `.github/workflows/github-pages.yml`.
-- Execute:
+npm run deploy
+```
 
-  ```bash
-  npm run predeploy
-  ```
-
-This will generate a static version in `personal-site/build/` which you can host or deploy to a CDN.
+This [website](https://create-react-app.dev/docs/deployment/#github-pages) provides useful information on how to deploy the webpage to CDN. 
 
 ## 🙌 Acknowledgements
 
