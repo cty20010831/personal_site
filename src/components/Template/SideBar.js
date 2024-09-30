@@ -22,10 +22,10 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        Hi there, this&apos;s Sam speaking! I am currently a second-year master in {' '}
+        I am currently a second-year master in {' '}
         computational social science (MACSS) student at the {' '}
-        <a href="https://www.uchicago.edu/"> University of Chicago </a>. {' '}
-        I have a broad interest in cognitive modeling to better understand {' '}
+        <a href="https://www.uchicago.edu/"> University of Chicago 🏫 </a>. {' '}
+        I have a broad interest in cognitive modeling 🧠 to better understand {' '}
         human cognitive processes across the specturm of mental health, {' '}
         including individuals with and without mental disorder. {' '}
       </p>

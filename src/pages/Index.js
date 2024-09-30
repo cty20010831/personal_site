@@ -11,7 +11,7 @@ const Index = () => (
       <header>
         <div className="title">
           <h2>
-            <Link to="/">Personal Webpage of Sam</Link>
+            <Link to="/">Sam&apos;s Personal Webpage</Link>
           </h2>
           <p>
             A beautiful, responsive, statically-generated, react application
