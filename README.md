@@ -32,6 +32,7 @@ Ensure you have [node](https://nodejs.org/) >= v16. Optionally, use [nvm](https:
 2. (Optional) Ensure you're on Node v16 or higher:
 
    ```bash
+   
    # Install nvm (make sure to fetch the latest version)
    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
