@@ -1,6 +1,12 @@
 # Intro
 
-I am a second-year UChicago MACSS student interested in <b style="color:#FF6347;">cognitive modeling</b> 🧠 to better understand mental processes among individuals with and without mental disorders. Broadly, I am interested in studying cognitive processes behind human <b style="color:#FF6347;">creativity</b> ✨ using state-of-the-art computational approaches (e.g., compositional stroke embedding models for drawing and NLP for narratives). Additionally, I am interested in utilizing reinforcement learning and sequential sampling models, as well as novel AI-based methods to better understand people's <b style="color:#FF6347;">decision-making processes</b> ⚖️ and further to advance <b style="color:#FF6347;">diagnostic and therapeutic methodologies</b> 🩺 through rigorous, data-driven approaches that extend beyond traditional psychological assessments.
+I am a second-year student in the MACSS program at the University of Chicago, passionate about using <b style="color:#FF6347;">cognitive modeling</b> 🧠 to better understand mental processes in individuals with and without mental disorders. My research focuses on developing multi-modal, real-world frameworks in computational psychiatry that integrate diverse data streams—such as real-time inputs from wearables, smartphones, and behavioral monitoring—to continuously track mental and cognitive changes across different timescales. Through these models, I aim to bridge the gap between theoretical insights and practical clinical applications, empowering clinicians with tools for dynamic diagnostics and personalized treatment strategies.
+
+In parallel, I explore <b style="color:#FF6347;">people's decision-making processes</b> ⚖️ by incorporating reinforcement learning and sequential sampling models. This line of research seeks to develop AI-powered <b style="color:#FF6347;">diagnostic and therapeutic methodologies</b> 🩺, advancing mental health care beyond traditional psychological assessments.
+
+Additionally, I study <b style="color:#FF6347;"> human creativity</b> ✨ by building cognitive models such as compositional stroke embedding for drawing and NLP-based methods for narrative analysis. This work helps uncover the underlying cognitive processes behind creative expression, which, in turn, offers new perspectives on mental health and well-being.
+
+By connecting these threads, my goal is to develop comprehensive frameworks that advance both the understanding of cognition and the practical delivery of mental health care, combining insights from creativity, decision-making, and psychiatric modeling into meaningful, real-world applications.
 
 # I Like
 
