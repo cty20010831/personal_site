@@ -19,10 +19,12 @@ const work = [
     startDate: '2024-06-01',
     summary: '',
     highlights: [
-      'Assist in a computational psychiatry project that studies inhibitory control of patients with suicidality.',
+      'Assist in a computational psychiatry project that generates parameter estimates of inhibitory control as one in- dependent variable to predict suicidal ideation trajectories in teenagers over an 18-month period (in collaboration with Dr. Richard Liu’s lab at Harvard Medical School).',
+      'Design a comprehensive pipeline for Hierarchical Bayesian Modeling via PyMC, encompassing data simulation, likelihood definition, model fitting, and model checking.',
       'Define likelihood functions for go, stop-respond, and successful inhibition trials in stop signal task using PyMC.',
-      'Design a comprehensive pipeline for Hierarchical Bayesian Modeling via PyMC, encompassing data simulation model fitting, and model checking.',
-      'Incorporate the model of the stop signal task into HSSM package before fitting it to empirical data.',
+      'Apply No-U-Turn Sampler (NUTS; an advanced variant of the Hamiltonian Monte Carlo algorithm) to estimate group-level and subject-level parameters.',
+      'Conduct posterior predictive checks, convergence diagnostics, and sensitivity analyses to ensure the robustness and reliability of the model.',
+      'Incorporate the PyMC model of the stop signal task into HSSM package before fitting it to empirical data.',
     ],
   },
   {
