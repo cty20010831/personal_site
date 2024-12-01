@@ -37,6 +37,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.25.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.25.3",
     "@babel/preset-react": "^7.24.7",
     "@testing-library/jest-dom": "^5.17.0",
@@ -67,7 +68,16 @@
     ]
   },
   "reactSnap": {
-    "include": ["/", "/about", "/contact", "/images", "/projects", "/resume", "/static", "/stats"],
+    "include": [
+      "/",
+      "/about",
+      "/contact",
+      "/images",
+      "/projects",
+      "/resume",
+      "/static",
+      "/stats"
+    ],
     "source": "public"
   }
 }
