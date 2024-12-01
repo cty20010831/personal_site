@@ -31,7 +31,23 @@ const About = () => {
             <p>(in about {count} words)</p>
           </div>
         </header>
-        <Markdown>{markdown}</Markdown>
+        <div style={{ lineHeight: '1.6', marginBottom: '20px' }}>
+          <Markdown
+            options={{
+              overrides: {
+                p: {
+                  props: {
+                    style: {
+                      marginBottom: '1.5em',
+                    },
+                  },
+                },
+              },
+            }}
+          >
+            {markdown}
+          </Markdown>
+        </div>
       </article>
     </Main>
   );
