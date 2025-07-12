@@ -32,7 +32,7 @@ const data = [
   {
     key: 'location',
     label: 'Current city',
-    value: 'Chicago, IL',
+    value: 'Boston, MA',
   },
 ];
 
