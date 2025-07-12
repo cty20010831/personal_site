@@ -23,7 +23,7 @@ const SideBar = () => (
       <h2>About</h2>
       <p>
         I am currently a full-time research assistant working with  {' '}
-        <a href="https://www.digitalmentalhealth.org/">John Torous </a>  {' '}
+        <a href="https://www.digitalmentalhealth.org/">Dr. John Torous </a>  {' '}
         at Beth Israel Deaconess Medical Center.  {' '}
         My research bridges theory-driven and data-driven approaches in {' '}
         computational psychiatry to improve clinical relevance. {' '}
