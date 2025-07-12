@@ -22,12 +22,17 @@ const SideBar = () => (
     <section className="blurb">
       <h2>About</h2>
       <p>
-        I am currently a second-year master in {' '}
-        computational social science (MACSS) student at the {' '}
-        <a href="https://www.uchicago.edu/"> University of Chicago 🏫 </a>. {' '}
-        I have a broad interest in cognitive modeling 🧠 to better understand {' '}
-        human cognitive processes across the specturm of mental health, {' '}
-        including individuals with and without mental disorder. {' '}
+        I am currently a full-time research assistant working with  {' '}
+        <a href="https://www.digitalmentalhealth.org/">John Torous </a>  {' '}
+        at Beth Israel Deaconess Medical Center.  {' '}
+        My research bridges theory-driven and data-driven approaches in {' '}
+        computational psychiatry to improve clinical relevance. {' '}
+        I study how cognitive and affective dysfunctions unfold in real-world {' '}
+        settings, with particular interests in decision-making, {' '}
+        spontaneous thought, and anticipatory anxiety. I also integrate {' '}
+        multimodal data—behavioral, neurophysiological, and digital {' '}
+        to develop multilmodal fusion models that provide interpretable and {' '}
+        personalized mental health insights. {' '}
       </p>
       <ul className="actions">
         <li>
