@@ -44,15 +44,27 @@ const courses = [
   },
   // University of Chicago
   {
+    title: 'The Neuroscience of Narratives',
+    number: 'PSYC 31900',
+    link: 'https://docs.google.com/document/d/1bxn4yXu5vIP8KBUAN_1XRVMy18dmoMMH/edit',
+    university: 'University of Chicago',
+  },
+  {
     title: 'Web Development',
     number: 'MPCS 52553',
     link: 'https://coursesearch92.ais.uchicago.edu/psc/prd92guest/EMPLOYEE/HRMS/c/UC_STUDENT_RECORDS_FL.UC_CLASS_SEARCH_FL.GBL?&',
     university: 'University of Chicago',
   },
   {
-    title: 'Deep Learning Systems',
-    number: 'CMSC 35200',
-    link: 'https://coursesearch92.ais.uchicago.edu/psc/prd92guest/EMPLOYEE/HRMS/c/UC_STUDENT_RECORDS_FL.UC_CLASS_SEARCH_FL.GBL?&',
+    title: 'Introduction to AI: Deep Learning and GAI',
+    number: 'DATA 37100',
+    link: 'https://canvas.uchicago.edu/courses/61573',
+    university: 'University of Chicago',
+  },
+  {
+    title: 'Theoretical Neuroscience: Statistics and Information Theory',
+    number: 'STAT 42600',
+    link: 'https://docs.google.com/spreadsheets/d/1m7tsGSUgOKWkU3ihVnIv-5CfJVrOdJzW0f8P9yw0FxA/edit?usp=sharing',
     university: 'University of Chicago',
   },
   {
