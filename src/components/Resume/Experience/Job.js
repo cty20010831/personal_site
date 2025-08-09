@@ -11,8 +11,9 @@ const Job = ({
   <article className="jobs-container">
     <header>
       <h4>
-        <a href={url}>{name}</a> - {position}
+        <a href={url} style={{ color: '#007acc', textDecoration: 'underline' }}>{name}</a>
       </h4>
+      <h5 style={{ fontStyle: 'italic' }}>{position}</h5>
       <p className="daterange">
         {' '}
         {dayjs(startDate).format('MMMM YYYY')} -{' '}
