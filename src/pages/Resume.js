@@ -35,6 +35,11 @@ const Resume = () => (
           <h2>
             <Link to="resume">Resume</Link>
           </h2>
+          <p>
+            <a href="/personal_site/Academic_CV_Tianyue_Cong.pdf" target="_blank" rel="noopener noreferrer">
+              📄 Download My Academic CV
+            </a>
+          </p>
           <div className="link-container">
             {Object.keys(sections).map((sec) => (
               <h4 key={sec}>
@@ -44,6 +49,7 @@ const Resume = () => (
           </div>
         </div>
       </header>
+
       {Object.entries(sections).map(([name, Section]) => (
         <Section key={name} />
       ))}
