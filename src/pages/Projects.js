@@ -14,7 +14,8 @@ const Projects = () => (
           <h2>
             <Link to="/projects">Projects</Link>
           </h2>
-          <p>A selection of course projects of the MACSS program</p>
+          <p>A selection of course projects of the MACSS program </p>
+          <p>(I may include a section of research projects for conferences/publications later)</p>
         </div>
       </header>
       {data.map((project) => (

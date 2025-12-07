@@ -28,7 +28,7 @@ const data = [
     icon: faTwitter,
   },
   {
-    link: 'congtianyue233@gmail.com',
+    link: 'samc010831@gmail.com',
     label: 'Email',
     icon: faEnvelope,
   },

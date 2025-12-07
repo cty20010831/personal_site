@@ -1,15 +1,23 @@
 const researchInterests = [
   {
-    title: 'Computational Psychiatry🩺',
-    description: 'Bayesian Inference, Cognitive Modeling, Computational Neuroscience Approach to Psychiatry, Digital Psychiatry',
+    title: 'High-level Cognition',
+    description: 'Decision-Making, Inhibitory Control, Cognitive Flexibility, Creative Reasoning',
   },
   {
-    title: 'Machine Learning and AI🤖',
-    description: 'Multi-Modal Data Integration, Real-Time Mental Health Monitoring Tools, Interpretable Machine Learning in Psychiatry, AI Chatbots in Mental Health',
+    title: 'Naturalistic Cognitive Neuroscience',
+    description: 'Naturalistic Stimuli, VR-Enhanced Paradigms, Spontaneous Thought Processes',
   },
   {
-    title: 'Creativity✨',
-    description: 'Cognitive Flexibility, Spontaneous Thought Processes, Creative Expression and Mental Health',
+    title: 'Computational Psychiatry',
+    description: 'Cognitive Modeling, Bayesian/Active Inference, Reinforcement Learning',
+  },
+  {
+    title: 'Digital Mental Health',
+    description: 'Ecological Momentary Assessment, Smartphone/Wearable Sensors, Real-Time Risk Monitoring, Just-in-Time Adaptive Interventions, Clinical Decision Support',
+  },
+  {
+    title: 'Digital Phenotyping Analytics',
+    description: 'Signal Processing, Multimodal Fusion, Representation Learning, Dynamical System Modeling, Intensive Longitudinal Modeling, Anomaly Detection, Missing Data Imputation',
   },
 ];
 

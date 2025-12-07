@@ -13,10 +13,10 @@ const Index = () => (
           <h2>
             <Link to="/">Sam&apos;s Personal Webpage</Link>
           </h2>
-          <p>
+          {/* <p>
             A beautiful, responsive, statically-generated, react application
             written with modern Javascript (credit to <a href="https://github.com/mldangelo/personal-site">Michael Angelo</a>.)
-          </p>
+          </p> */}
         </div>
       </header>
       <p>

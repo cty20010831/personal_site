@@ -25,14 +25,13 @@ const SideBar = () => (
         I am currently a full-time research assistant working with  {' '}
         <a href="https://www.digitalmentalhealth.org/">Dr. John Torous </a>  {' '}
         at Beth Israel Deaconess Medical Center.  {' '}
-        My research bridges theory-driven and data-driven approaches in {' '}
-        computational psychiatry to improve clinical relevance. {' '}
-        I study how cognitive and affective dysfunctions unfold in real-world {' '}
-        settings, with particular interests in decision-making, {' '}
-        spontaneous thought, and anticipatory anxiety. I also integrate {' '}
-        multimodal data—behavioral, neurophysiological, and digital {' '}
-        to develop multilmodal fusion models that provide interpretable and {' '}
-        personalized mental health insights. {' '}
+        I study how cognitive and affective dysfunctions unfold in real-world  {' '}
+        settings using naturalistic cognitive neuroscience paradigms,  {' '}
+        with particular interests in human high-level cognition.  {' '}
+        I also leverage state-of-the-art digital phenotyping techniques to  {' '}
+        integrate multimodal data—behavioral, neurophysiological, and digital—  {' '}
+        to gain a better understanding of brain-body-behavior  {' '}
+        signal dynamics in psychiatric disorders.  {' '}
       </p>
       <ul className="actions">
         <li>
