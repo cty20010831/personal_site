@@ -1,0 +1,76 @@
+// Photography grid
+
+#life,
+#photography {
+  > header .title {
+    text-align: center;
+  }
+}
+
+#life {
+  background: _palette(bg);
+}
+
+#photography {
+  background: rgba(46, 89, 186, 0.035);
+}
+
+.photo-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.photo-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-image-wrap {
+  aspect-ratio: 3 / 4;
+  border-radius: 6px;
+  overflow: hidden;
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+    width: 100%;
+  }
+
+  &:hover img {
+    transform: scale(1.04);
+  }
+}
+
+.photo-caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  padding: 0.45em 0.1em 0;
+
+  .photo-location {
+    color: _palette(fg-bold);
+    font-family: _font(family-heading);
+    font-size: 0.75em;
+    font-weight: _font(weight-heading-bold);
+  }
+
+  .photo-date {
+    color: _palette(fg-light);
+    font-size: 0.72em;
+  }
+}
+
+@include breakpoint(medium) {
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include breakpoint(small) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -52,5 +52,6 @@ module.exports = {
         return: true,
       },
     ],
+    'import/no-extraneous-dependencies': ['error', { packageDir: __dirname }],
   },
 };

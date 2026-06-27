@@ -9,24 +9,32 @@ const routes = [
     path: '/about',
   },
   {
-    label: 'Resume',
-    path: '/resume',
+    label: 'Experience',
+    path: '/experience',
   },
   {
-    label: 'Projects',
-    path: '/projects',
+    label: 'Skills',
+    path: '/skills',
   },
   {
-    label: 'Blog',
-    path: '/blog',
+    label: 'Publications',
+    path: '/publications',
   },
   {
-    label: 'Stats',
-    path: '/stats',
+    label: 'Blogs',
+    path: '/blogs',
   },
   {
     label: 'Contact',
     path: '/contact',
+  },
+  {
+    label: 'Life',
+    path: '/life',
+  },
+  {
+    label: 'Photography',
+    path: '/photography',
   },
 ];
 

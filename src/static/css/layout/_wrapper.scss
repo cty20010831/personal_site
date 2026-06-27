@@ -13,7 +13,7 @@
   margin: 0 auto;
   max-width: 100%;
   opacity: 1;
-  padding: (_size(section-spacing) * 1.5);
+  padding: _size(section-spacing-small) (_size(section-spacing) * 1.5) (_size(section-spacing) * 1.5);
   width: 90em;
 
   body.is-menu-visible & {
@@ -26,6 +26,10 @@
 
   @include breakpoint(large) {
     display: block;
+  }
+
+  @include breakpoint(medium) {
+    padding: _size(section-spacing);
   }
 
   @include breakpoint(small) {

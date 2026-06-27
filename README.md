@@ -78,3 +78,31 @@ This [website](https://create-react-app.dev/docs/deployment/#github-pages) provi
 - Initial template from [Future Imperfect](https://html5up.net/future-imperfect) by [@ajlkn](https://github.com/ajlkn) for [HTML5 UP](html5up.net).
 - Special thanks to [@typpo](https://github.com/typpo) for tirelessly answering all of my node.js and react questions.
 - Kudos to [@notrueblood](https://github.com/notrueblood)[<sup>[1]</sup>](https://github.com/mldangelo/personal-site/pull/218) and [@sjhsieh](https://github.com/sjhsieh)[<sup>[2]</sup>](https://github.com/mldangelo/personal-site/issues/168) for their constructive feedback.
+
+## Project Directory Organization
+
+```text
+.
+├── .github/                         # GitHub Actions and repository automation
+├── docs/                            # Project notes and adaptation documentation
+├── public/                          # Static assets served directly by the app
+│   ├── images/                      # Website images, including blog images and public assets
+│   └── Academic_CV_Tianyue_Cong.pdf # Public CV PDF
+├── src/                             # React application source code
+│   ├── __tests__/                   # Jest tests for the React app
+│   ├── components/                  # Reusable UI components organized by feature
+│   ├── data/                        # Editable website content and structured data
+│   │   ├── degrees.js               # Education data
+│   │   ├── work.js                  # Selected research experience data
+│   │   ├── skills.js                # Skills data
+│   │   └── publications.js          # Publication metadata and abstracts
+│   ├── layouts/                     # Shared page shell, metadata, navigation, and sidebar
+│   ├── pages/                       # Route-level pages: Home, About, Experience, Skills, Publications, Blogs, Contact, Life, Photography
+│   ├── static/css/                  # SCSS source for pages, components, layout, and typography
+│   ├── App.js                       # Route definitions and top-level router setup
+│   └── index.js                     # Application entry point
+├── .eslintrc.js                     # ESLint configuration
+├── jest.config.js                   # Jest configuration
+├── package.json                     # Project metadata, dependencies, and npm scripts
+└── README.md                        # Project overview, setup, deployment, and notes
+```

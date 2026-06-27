@@ -1,22 +1,37 @@
 /* Skills */
 
-.skills .title {
-  text-align: center;
+.skill-card-grid {
+  display: grid;
+  gap: 1.5em;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.skill-button-container {
-  margin: 1.5em 0;
-  text-align: center;
+.skill-category-card {
+  background: #fff;
+  border: solid 1px rgba(160, 160, 160, 0.24);
+  border-radius: 8px;
+  box-shadow: 0 0.35em 1.25em rgba(0, 0, 0, 0.045);
+  padding: 1.5em;
 }
 
-.skillbutton {
-  box-shadow: none;
-  outline: none;
+.skill-category-header {
+  align-items: center;
+  display: flex;
+  gap: 0.75em;
+  margin-bottom: 1.25em;
+
+  h3 {
+    font-size: 0.9em;
+    line-height: 1.35;
+    margin: 0;
+  }
 }
 
-.skillbutton-active {
-  box-shadow: inset 0 0 0 1px _palette(accent);
-  color: _palette(accent) !important;
+.skill-category-marker {
+  border-radius: 999px;
+  flex-shrink: 0;
+  height: 0.8em;
+  width: 0.8em;
 }
 
 .skillbar {
@@ -41,6 +56,10 @@
   transition-property: width, background-color;
 }
 
+.skill-category-card .skillbar:last-child {
+  margin-bottom: 0;
+}
+
 .skillbar-title {
   position: absolute;
   top: 0;
@@ -58,11 +77,12 @@
 }
 
 .skillbar-title span {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   background: rgba(0, 0, 0, 0.1);
   padding: 0 20px;
   height: 35px;
-  line-height: 35px;
   -webkit-border-top-left-radius: 3px;
   -webkit-border-bottom-left-radius: 3px;
   -moz-border-radius-topleft: 3px;
@@ -71,13 +91,19 @@
   border-bottom-left-radius: 3px;
 }
 
+.skillbar-icon {
+  flex-shrink: 0;
+  font-size: 16px;
+}
+
 .skillbar-bar {
   height: 35px;
-  width: 0px;
+  width: 0%;
   background: #6adcfa;
   border-radius: 3px;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
+  transition: width 1.6s ease-out;
 }
 
 .skill-bar-percent {
@@ -89,4 +115,10 @@
   line-height: 35px;
   color: #444;
   color: rgba(0, 0, 0, 0.4);
+}
+
+@include breakpoint(medium) {
+  .skill-card-grid {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,0 +1,158 @@
+// Publications page (/publications)
+
+#publications,
+#publication-post {
+  $publication-year: #2f6f73;
+  $publication-topic: #8a5a12;
+  $publication-type: #7b4f8c;
+  $publication-all: #4f5358;
+
+  .publication-filters {
+    margin: 0 0 2em 0;
+  }
+
+  .publication-filter-group {
+    margin: 0 0 1em 0;
+
+    h3 {
+      font-size: 0.65em;
+      margin: 0 0 0.75em 0;
+      text-align: center;
+    }
+  }
+
+  .publication-filter-reset {
+    margin-bottom: 1.25em;
+    text-align: center;
+  }
+
+  .publication-filter-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    justify-content: center;
+    margin: 0 0 0.75em 0;
+  }
+
+  .publication-filter {
+    box-shadow: inset 0 0 0 1px _palette(border);
+    font-size: 0.65em;
+    font-weight: _font(weight-heading-bold);
+    height: 2.8em;
+    line-height: 2.8em;
+    padding: 0 1.25em;
+  }
+
+  .publication-filter-all {
+    background: $publication-all;
+    box-shadow: none;
+    color: #fff !important;
+  }
+
+  .publication-filter-year {
+    background: $publication-year;
+    box-shadow: none;
+    color: #fff !important;
+  }
+
+  .publication-filter-topic {
+    background: $publication-topic;
+    box-shadow: none;
+    color: #fff !important;
+  }
+
+  .publication-filter-type {
+    background: $publication-type;
+    box-shadow: none;
+    color: #fff !important;
+  }
+
+  .publication-filter-active {
+    background: _palette(accent);
+    box-shadow: none;
+    color: _palette(bg) !important;
+  }
+
+  .publication-filter-all.publication-filter-active {
+    background: $publication-all;
+    box-shadow: none;
+    color: _palette(bg) !important;
+  }
+
+  .publication-card {
+    border: solid 1px _palette(border);
+    margin: 0 0 _size(element-margin) 0;
+    padding: 1.5em;
+
+    h3 {
+      font-size: 0.9em;
+      line-height: 1.6;
+      margin-bottom: 0.8em;
+    }
+  }
+
+  .publication-authors,
+  .publication-citation {
+    margin: 0 0 0.8em 0;
+  }
+
+  .publication-authors {
+    color: _palette(fg-bold);
+  }
+
+  .publication-meta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.6em;
+    margin: 1em 0;
+
+    .publication-meta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6em;
+    }
+
+    .publication-meta-topics {
+      margin-bottom: 0.05em;
+    }
+
+    span {
+      border: solid 1px _palette(border);
+      border-radius: 4px;
+      font-family: _font(family-heading);
+      font-size: 0.6em;
+      font-weight: _font(weight-heading-bold);
+      letter-spacing: _font(kerning-heading);
+      padding: 0.4em 0.75em;
+      text-transform: none;
+    }
+
+    .publication-tag-year {
+      background: $publication-year;
+      border-color: $publication-year;
+      color: #fff;
+    }
+
+    .publication-tag-topic {
+      background: $publication-topic;
+      border-color: $publication-topic;
+      color: #fff;
+    }
+
+    .publication-tag-type {
+      background: $publication-type;
+      border-color: $publication-type;
+      color: #fff;
+    }
+  }
+
+  .publication-detail {
+    margin-bottom: 2em;
+  }
+
+  .publication-navigation {
+    margin-top: 2em;
+    text-align: center;
+  }
+}

@@ -5,26 +5,25 @@ import dayjs from 'dayjs';
 
 const BlogCell = ({ data }) => (
   <div className="blog-simple-card">
+    <Link to={`/blogs/${data.slug}`} className="blog-image-link">
+      <div className="blog-image-container">
+        <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} className="blog-simple-image" />
+      </div>
+    </Link>
     <header className="blog-header">
-      <h2>
-        <Link to={`/blog/${data.slug}`}>{data.title}</Link>
-      </h2>
       <time className="blog-date">
         {dayjs(data.date).format('MMMM YYYY')}
       </time>
+      <div className="blog-card-tags">
+        {data.tags.map((tag) => (
+          <span className="blog-card-tag" key={tag}>{tag}</span>
+        ))}
+      </div>
+      <h2>
+        <Link to={`/blogs/${data.slug}`}>{data.title}</Link>
+      </h2>
       <p className="blog-excerpt">{data.excerpt}</p>
     </header>
-    <Link to={`/blog/${data.slug}`} className="blog-image-link">
-      <div className="blog-image-container">
-        <img src={`${process.env.PUBLIC_URL}${data.image}`} alt={data.title} className="blog-simple-image" />
-        <div className="blog-hover-overlay">
-          <div className="blog-overlay-content">
-            <h3 className="blog-overlay-title">{data.title}</h3>
-            <p className="blog-overlay-subtitle">Click to see more! 😁</p>
-          </div>
-        </div>
-      </div>
-    </Link>
   </div>
 );
 
@@ -34,6 +33,7 @@ BlogCell.propTypes = {
     slug: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
     excerpt: PropTypes.string.isRequired,
     content: PropTypes.string.isRequired,
   }).isRequired,
