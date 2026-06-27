@@ -13,9 +13,10 @@
   "scripts": {
     "analyze": "npm run build && source-map-explorer build/static/js/*.chunk.js",
     "build": "rimraf ./build && react-scripts build",
+    "clean:snap": "rimraf public/200.html public/404.html public/about/index.html public/images/index.html public/life/index.html public/photography/index.html public/publications/index.html public/static/index.html",
     "lint": "eslint \"**/*.js\"",
     "prebuild": "node scripts/generate-blog-photos.js",
-    "predeploy": "npm run build && react-snap",
+    "predeploy": "npm run clean:snap && npm run build && react-snap",
     "prestart": "node scripts/generate-blog-photos.js",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
@@ -76,12 +77,30 @@
     "include": [
       "/",
       "/about",
-      "/images",
+      "/experience",
+      "/skills",
+      "/publications",
+      "/publications/self-efficacy",
+      "/publications/h3-mosaic",
+      "/publications/sleep-estimation-smartphone-sensors",
+      "/publications/art-of-positivity-in-drawing",
+      "/publications/perceived-academic-stress",
+      "/blogs",
+      "/blogs/texas_roadtrip",
+      "/blogs/ascp_2026",
+      "/blogs/apa_2026",
+      "/blogs/tampa_getaway",
+      "/blogs/spain_and_nice",
+      "/blogs/dubai_layover",
+      "/blogs/uchicago_convocation",
+      "/blogs/yellowstone-national-park",
+      "/blogs/paris",
+      "/contact",
       "/life",
       "/photography",
-      "/publications",
-      "/static"
+      "/404.html"
     ],
-    "source": "public"
+    "source": "build",
+    "crawl": false
   }
 }
