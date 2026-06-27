@@ -86,17 +86,25 @@ This [website](https://create-react-app.dev/docs/deployment/#github-pages) provi
 ├── .github/                         # GitHub Actions and repository automation
 ├── docs/                            # Project notes and adaptation documentation
 ├── public/                          # Static assets served directly by the app
-│   ├── images/                      # Website images, including blog images and public assets
+│   ├── images/                      # Website images, including blog, photography, and institution assets
 │   └── Academic_CV_Tianyue_Cong.pdf # Public CV PDF
 ├── src/                             # React application source code
 │   ├── __tests__/                   # Jest tests for the React app
 │   ├── components/                  # Reusable UI components organized by feature
 │   ├── data/                        # Editable website content and structured data
+│   │   ├── about.md                 # About page markdown content
+│   │   ├── blog.js                  # Blog post metadata
+│   │   ├── blogPhotos.generated.js  # Generated blog slideshow photo manifest
+│   │   ├── contact.js               # Contact and social links
 │   │   ├── degrees.js               # Education data
-│   │   ├── work.js                  # Selected research experience data
+│   │   ├── life.md                  # Life page markdown content
+│   │   ├── news.js                  # Home page news items
+│   │   ├── photography.js           # Photography page image metadata
+│   │   ├── publications.js          # Publication metadata and abstracts
+│   │   ├── routes.js                # Visible navigation labels and paths
 │   │   ├── skills.js                # Skills data
-│   │   └── publications.js          # Publication metadata and abstracts
-│   ├── layouts/                     # Shared page shell, metadata, navigation, and sidebar
+│   │   └── work.js                  # Selected research experience data
+│   ├── layouts/                     # Shared page shell and metadata wrapper
 │   ├── pages/                       # Route-level pages: Home, About, Experience, Skills, Publications, Blogs, Contact, Life, Photography
 │   ├── static/css/                  # SCSS source for pages, components, layout, and typography
 │   ├── App.js                       # Route definitions and top-level router setup
