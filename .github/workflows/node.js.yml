@@ -12,14 +12,11 @@ on:
 
 jobs:
   lint:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     timeout-minutes: 5
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
           cache: "npm"
@@ -28,50 +25,22 @@ jobs:
         run: npm run lint
 
   build:
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
     timeout-minutes: 10
-    strategy:
-      matrix:
-        node-version: [16.x, 18.x, 20.x]
-        os: [ubuntu-20.04, windows-latest, macos-latest]
-        exclude:
-          - os: windows-latest
-            node-version: 16.x
-          - os: windows-latest
-            node-version: 18.x
-          - os: macos-latest
-            node-version: 16.x
-          - os: macos-latest
-            node-version: 18.x
     steps:
       - uses: actions/checkout@v4
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Use Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version-file: ".nvmrc"
           cache: "npm"
       - run: npm ci
-      - name: Build and Statically Render
-        shell: bash
+      - name: Use runner Chrome for React Snap
         run: |
-          function retry {
-            local n=1
-            local max=5
-            local delay=1
-            while true; do
-              "$@" && break || {
-                if [[ $n -lt $max ]]; then
-                  ((n++))
-                  echo "Command failed. Attempt $n/$max:"
-                  sleep $delay;
-                else
-                  echo "The command has failed after $n attempts."
-                  return 1
-                fi
-              }
-            done
-          }
-          retry npm run predeploy
+          CHROME_PATH="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium-browser)"
+          echo "PUPPETEER_EXECUTABLE_PATH=$CHROME_PATH" >> "$GITHUB_ENV"
+      - name: Build and Statically Render
+        run: npm run predeploy
         env:
           NODE_ENV: development
       - name: Test

@@ -56,31 +56,44 @@ By default, the application should be available at [http://localhost:3000/](http
 
 ## 🚢 Deploying
 
-The site deploys to GitHub Pages through GitHub Actions. After changes are
-merged or pushed to `main`, the `Deploy GitHub Pages` workflow installs
-dependencies, builds and statically renders the app, uploads the `build/`
-artifact, and publishes it to:
+The site deploys to GitHub Pages through GitHub Actions. The active deployment
+workflow is `.github/workflows/pages.yml` (`Deploy GitHub Pages`).
+
+When changes are pushed to `main`, the workflow:
+
+1. Checks out the repository.
+2. Installs dependencies with `npm ci`.
+3. Uses the GitHub runner's Chrome executable for `react-snap`.
+4. Runs `npm run predeploy`, which cleans stale prerendered files, builds the
+   CRA app, and statically renders configured routes into `build/`.
+5. Uploads `build/` as a GitHub Pages artifact.
+6. Publishes the artifact to:
 
 ```text
 https://cty20010831.github.io/personal_site/
 ```
 
-For the usual deployment path, commit your changes and push `main`:
+The usual deployment path is therefore just:
 
 ```bash
 git push origin main
 ```
 
-If GitHub Pages has not already been switched to Actions-based deployment,
-configure it once in GitHub under `Settings` → `Pages` → `Build and deployment`
-→ `Source: GitHub Actions`.
+GitHub Pages should be configured under `Settings` → `Pages` →
+`Build and deployment` → `Source: GitHub Actions`.
 
-The old local deployment command remains available as a temporary manual
-fallback while the GitHub Actions deployment is being verified:
+### Archived local `gh-pages` deployment
+
+Before the GitHub Actions workflow was added, deployment was done locally with
+the `gh-pages` package. That path remains in `package.json` as a manual fallback:
 
 ```bash
 npm run deploy
 ```
+
+That command runs `npm run predeploy` and then publishes `build/` to the
+repository's `gh-pages` branch. Prefer the GitHub Actions workflow for normal
+updates; use the local command only if the Actions path needs a manual fallback.
 
 This [website](https://create-react-app.dev/docs/deployment/#github-pages) provides useful information on how to deploy the webpage to CDN. 
 
@@ -97,11 +110,35 @@ This [website](https://create-react-app.dev/docs/deployment/#github-pages) provi
 ├── .github/                         # GitHub Actions and repository automation
 ├── docs/                            # Project notes and adaptation documentation
 ├── public/                          # Static assets served directly by the app
-│   ├── images/                      # Website images, including blog, photography, and institution assets
+│   ├── images/
+│   │   ├── about/                   # About-page research/theme images
+│   │   ├── blog/                    # Blog post folders; each post uses cover.JPG plus gallery photos
+│   │   ├── favicon/                 # Browser and mobile favicon assets
+│   │   ├── institutions/            # Logos for education and research experience cards
+│   │   ├── photography/             # Photography gallery images grouped by country
+│   │   └── me.jpg                   # Home/profile headshot
 │   └── Academic_CV_Tianyue_Cong.pdf # Public CV PDF
+├── scripts/
+│   └── generate-blog-photos.js      # Builds the blog slideshow photo manifest before start/build
 ├── src/                             # React application source code
 │   ├── __tests__/                   # Jest tests for the React app
-│   ├── components/                  # Reusable UI components organized by feature
+│   ├── components/
+│   │   ├── Blog/
+│   │   │   └── BlogCell.js          # Blog list card
+│   │   ├── Contact/
+│   │   │   ├── ContactIcons.js      # Contact/social icon rendering
+│   │   │   └── EmailLink.js         # Mailto contact link helper
+│   │   ├── Publications/
+│   │   │   ├── PublicationAuthors.js # Sam author-name highlighting
+│   │   │   └── PublicationCard.js   # Publication list card
+│   │   ├── Template/
+│   │   │   ├── Analytics.js         # Google Analytics hook
+│   │   │   ├── Hamburger.js         # Mobile navigation toggle
+│   │   │   ├── Navigation.js        # Header navigation from route data
+│   │   │   └── ScrollToTop.js       # Scroll reset on route changes
+│   │   ├── Education.js             # Home education timeline/cards
+│   │   ├── Experience.js            # Experience timeline/cards
+│   │   └── Skills.js                # Grouped skills chart/cards
 │   ├── data/                        # Editable website content and structured data
 │   │   ├── about.md                 # About page markdown content
 │   │   ├── blog.js                  # Blog post metadata
@@ -115,9 +152,29 @@ This [website](https://create-react-app.dev/docs/deployment/#github-pages) provi
 │   │   ├── routes.js                # Visible navigation labels and paths
 │   │   ├── skills.js                # Skills data
 │   │   └── work.js                  # Selected research experience data
-│   ├── layouts/                     # Shared page shell and metadata wrapper
-│   ├── pages/                       # Route-level pages: Home, About, Experience, Skills, Publications, Blogs, Contact, Life, Photography
-│   ├── static/css/                  # SCSS source for pages, components, layout, and typography
+│   ├── layouts/
+│   │   └── Main.js                  # Shared page shell, Helmet metadata, navigation, footer
+│   ├── pages/
+│   │   ├── Index.js                 # Home: profile, contact icons, CV button, education, news
+│   │   ├── About.js                 # About page from about.md
+│   │   ├── Experience.js            # Experience route using work.js and Experience component
+│   │   ├── Skills.js                # Skills route using skills.js and Skills component
+│   │   ├── Publications.js          # Publication list, filters, cards
+│   │   ├── PublicationPost.js       # Publication detail route
+│   │   ├── Blog.js                  # Blog list, tag filters, cards
+│   │   ├── BlogPost.js              # Blog detail route and photo slideshow
+│   │   ├── Contact.js               # Contact page cards
+│   │   ├── Life.js                  # Life page from life.md
+│   │   ├── Photography.js           # Photography gallery route
+│   │   └── NotFound.js              # 404 fallback
+│   ├── static/css/
+│   │   ├── base/                    # Base page and typography rules
+│   │   ├── components/              # Shared component styles
+│   │   ├── layout/                  # Header, footer, wrapper, main layout styles
+│   │   ├── libs/                    # SCSS variables, functions, mixins, breakpoints
+│   │   ├── pages/                   # Page-specific styles for academic/contact/etc.
+│   │   ├── blog.scss                # Blog list/detail styles
+│   │   └── main.scss                # Global SCSS entry point
 │   ├── App.js                       # Route definitions and top-level router setup
 │   └── index.js                     # Application entry point
 ├── .eslintrc.js                     # ESLint configuration
@@ -125,3 +182,31 @@ This [website](https://create-react-app.dev/docs/deployment/#github-pages) provi
 ├── package.json                     # Project metadata, dependencies, and npm scripts
 └── README.md                        # Project overview, setup, deployment, and notes
 ```
+
+Section source map:
+
+- Home (`/`): `src/pages/Index.js`, with profile image
+  `public/images/me.jpg`, contact links from `src/data/contact.js`, education
+  from `src/data/degrees.js`, news from `src/data/news.js`, and CV PDF from
+  `public/Academic_CV_Tianyue_Cong.pdf`.
+- About (`/about`): `src/pages/About.js`, markdown in `src/data/about.md`, and
+  supporting images in `public/images/about/`.
+- Experience (`/experience`): `src/pages/Experience.js`,
+  `src/components/Experience.js`, research data in `src/data/work.js`, and
+  institution logos in `public/images/institutions/`.
+- Skills (`/skills`): `src/pages/Skills.js`, `src/components/Skills.js`, and
+  grouped skill data in `src/data/skills.js`.
+- Publications (`/publications`, `/publications/:slug`):
+  `src/pages/Publications.js`, `src/pages/PublicationPost.js`,
+  `src/components/Publications/`, and publication records in
+  `src/data/publications.js`.
+- Blogs (`/blogs`, `/blogs/:slug`, plus legacy `/blog` aliases):
+  `src/pages/Blog.js`, `src/pages/BlogPost.js`, `src/components/Blog/`,
+  metadata in `src/data/blog.js`, generated slideshow data in
+  `src/data/blogPhotos.generated.js`, and photos in `public/images/blog/`.
+- Contact (`/contact`): `src/pages/Contact.js`, `src/components/Contact/`, and
+  links in `src/data/contact.js`.
+- Life (`/life`): `src/pages/Life.js` and markdown in `src/data/life.md`.
+- Photography (`/photography`): `src/pages/Photography.js`, image metadata in
+  `src/data/photography.js`, and gallery assets in
+  `public/images/photography/`.
