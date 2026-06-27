@@ -86,7 +86,6 @@ const Index = () => (
           <h1>Sam Cong</h1>
           <TypeAnimation
             sequence={[
-              "I'm a Columbia Neurobiology PhD student.", 2000,
               'I study real-world brain-behavior dynamics.', 2000,
               'I develop digital phenotyping methods.', 2000,
               'I work on neural decoding and BCI.', 2000,
