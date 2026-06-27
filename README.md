@@ -55,19 +55,30 @@ Ensure you have [node](https://nodejs.org/) >= v16. Optionally, use [nvm](https:
 By default, the application should be available at [http://localhost:3000/](http://localhost:3000/).
 
 ## 🚢 Deploying
-Here, I added lines under `package.json` to directly deploy using gh-pages without needing to using github workfow (`.github/workflows/github-pages/yml` deleted). 
 
-![alt](docs/images/package_script_sec.png)
+The site deploys to GitHub Pages through GitHub Actions. After changes are
+merged or pushed to `main`, the `Deploy GitHub Pages` workflow installs
+dependencies, builds and statically renders the app, uploads the `build/`
+artifact, and publishes it to:
 
-![alt](docs/images/package_devDependecies_sec.png)
+```text
+https://cty20010831.github.io/personal_site/
+```
 
-![alt](docs/images/package_reactSnap.png)
+For the usual deployment path, commit your changes and push `main`:
 
-
-Now, to update changes and deploy it to my personal website, simply run:
 ```bash
-npm run build
+git push origin main
+```
 
+If GitHub Pages has not already been switched to Actions-based deployment,
+configure it once in GitHub under `Settings` → `Pages` → `Build and deployment`
+→ `Source: GitHub Actions`.
+
+The old local deployment command remains available as a temporary manual
+fallback while the GitHub Actions deployment is being verified:
+
+```bash
 npm run deploy
 ```
 

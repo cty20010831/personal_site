@@ -42,6 +42,15 @@ dist/
 tmp/
 build/
 
+# React Snap prerendered route output
+public/200.html
+public/404.html
+public/about/index.html
+public/life/index.html
+public/photography/index.html
+public/publications/index.html
+public/static/index.html
+
 # OSX
 .DS_Store
 
